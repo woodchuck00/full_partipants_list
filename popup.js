@@ -26,11 +26,14 @@ checkPageButton.addEventListener('click', function() {
 
     count.innerHTML = list.length
 
+    var trueUpdateCount=0;
     list.forEach((x) => {
       let newItem = document.createElement('li')
       newItem.innerHTML = x
-
-      displayList.appendChild(newItem)
+      if(displayList.innerHTML.indexOf("<li>"+x+"</li>")==-1){
+        displayList.appendChild(newItem);
+        trueUpdateCount++;
+      }
     })
   });
 }, false);
@@ -44,4 +47,3 @@ function getData(list) {
 
   chrome.storage.local.set({ list: list });
 }
-
