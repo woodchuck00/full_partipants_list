@@ -2,7 +2,7 @@
   "manifest_version": 3,
 
   "name": "Full Participant List",
-  "description": "This extension will get all participates in YouTube chat regardless of time",
+  "description": "This extension will get all participants in YouTube chat regardless of the time.",
   "version": "1.0",
   "permissions": [
    "activeTab",
