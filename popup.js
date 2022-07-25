@@ -1,6 +1,12 @@
 let checkPageButton = document.querySelector('#check_page')
+let clearStorageButton = document.querySelector('#clear_storage')
 let displayList = document.querySelector('#display_list ul')
 let count = document.querySelector('#count')
+
+clearStorageButton.addEventListener('click', function() {
+  let data = []
+  chrome.storage.local.set({ list: data });
+})
 
 checkPageButton.addEventListener('click', function() {
   chrome.storage.local.get(["list"], ({ list }) => {
