@@ -1,23 +1,22 @@
 let checkPageButton = document.querySelector('#check_page')
 let displayList = document.querySelector('#display_list ul')
 let count = document.querySelector('#count')
-let list = []
 
 checkPageButton.addEventListener('click', function() {
-  chrome.tabs.query({currentWindow: true, active: true}, function(tabs) {
-    let tab = tabs[0];
-
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      function: getData,
-      args: [list] 
-    });
-  });
-
   chrome.storage.local.get(["list"], ({ list }) => {
+    chrome.tabs.query({currentWindow: true, active: true}, function(tabs) {
+      let tab = tabs[0];
+
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        function: getData,
+        args: [list] 
+      });
+    });
+
     if(list.length > 0) {
-        list.sort((a, b) => a.localeCompare(b))
-      }
+      list.sort((a, b) => a.localeCompare(b))
+    }
 
     count.innerHTML = list.length
 

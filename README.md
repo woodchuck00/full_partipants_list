@@ -5,6 +5,7 @@ This extension will get all participants in YouTube chat regardless of the time.
 - Go to live chat window https://www.youtube.com/live_chat?...
 - Click on the extension icon
 - Click generate list button
+- storage will need to be cleared at the start of every new live stream
 
 # How To Install
 - click code drop down, download zip
