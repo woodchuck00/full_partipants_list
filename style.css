@@ -1,0 +1,13 @@
+body {
+    min-width:300px;
+}
+
+ul {
+    padding-left: 30px;
+    padding-bottom: 20px;
+    list-style-type: "\1F50C";
+}
+
+li {
+    font-size: 1.875em;
+}
