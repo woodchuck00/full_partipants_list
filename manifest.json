@@ -3,7 +3,7 @@
 
   "name": "Full Participant List",
   "description": "This extension will get all participants in YouTube chat regardless of the time.",
-  "version": "1.1",
+  "version": "1.2",
   "permissions": [
    "activeTab",
    "storage",

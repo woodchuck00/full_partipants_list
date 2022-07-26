@@ -1,6 +1,7 @@
+let list = []
 
-chrome.runtime.onInstalled.addListener(async () => {
-  let url = chrome.runtime.getURL("hello.html");
-  let tab = await chrome.tabs.create({ url });
-  console.log(`Created tab ${tab.id}`);
+chrome.runtime.onInstalled.addListener(() => {
+  let data = []
+  chrome.storage.local.set({ list: data })
+  console.log('Default list is set to []');
 });
