@@ -2,7 +2,6 @@ let genListButton = document.querySelector('#gen_list')
 let clearStorageButton = document.querySelector('#clear_storage')
 let displayList = document.querySelector('#display_list ul')
 let count = document.querySelector('#count')
-let list = []
 
 document.addEventListener("DOMContentLoaded", makeList, false) 
 
@@ -16,6 +15,7 @@ clearStorageButton.addEventListener('click', () => {
     x.remove();
   })
   count.innerHTML = "0"
+  window.close()
 }, false)
 
 function makeList() {
