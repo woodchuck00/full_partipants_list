@@ -3,13 +3,12 @@ let clearStorageButton = document.querySelector('#clear_storage')
 let displayList = document.querySelector('#display_list ul')
 let count = document.querySelector('#count')
 let list = []
-var bgPage = chrome.extension.getBackgroundPage();
 
 document.addEventListener("DOMContentLoaded", makeList, false) 
 
 genListButton.addEventListener('click', makeList, false)
 
-clearStorageButton.addEventListener('click', function() {
+clearStorageButton.addEventListener('click', () => {
   let data = []
   chrome.storage.local.set({ list: data })
 
