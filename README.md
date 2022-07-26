@@ -15,7 +15,6 @@ This extension will get all participants in YouTube chat regardless of the time.
 - select unzipped file.
 
 # Bug
-extension needs to be closed for the storage to full be cleared
+async error generate list button may need to be clicked twice.
 
 # TODO
-- ave list be loaded when extension is opened. 
